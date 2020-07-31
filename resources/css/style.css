@@ -1,0 +1,78 @@
+html {
+    font-size: 16px;
+}
+
+.flex-container {
+    display: flex;
+}
+
+header {
+    justify-content: center;
+    height: 4rem;
+    width: 100%;
+    border: 1px solid black;
+}
+
+header #logo {
+    width: 25%;
+}
+
+header #links {
+    width: 75%;
+}
+
+header * {
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+header .header-container {
+    width: 100%;
+}
+
+
+
+.desktop {
+    display: none;
+}
+
+@media only screen and (min-width: 600px) {
+    .desktop {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    header .header-container {
+        justify-content: space-between;
+    }
+
+    header #logo {
+        justify-content: left;
+        padding-left: 1.5rem;
+    }
+
+    header #links ul {
+        justify-content: flex-end;
+        padding-right: 1rem;
+    }
+
+    #logo .brand-name {
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+
+    #links .nav-link {
+        padding: 0 0.5rem;
+        font-size: 1.5rem;
+        box-shadow: inset ;
+    }
+
+    svg{
+    }
+
+}
