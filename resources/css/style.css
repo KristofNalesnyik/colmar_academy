@@ -1,9 +1,112 @@
+* {
+    box-sizing: border-box;
+}
+
+.u_p-l-1rem {
+    padding-left: 1rem;
+}
+
+.d8d8d8 {
+    background-color: #d8d8d8;
+}
+
+.center {
+    text-align: center;
+}
+
 html {
     font-size: 16px;
 }
 
+.width-30,
+.width-35,
+.width-40,
+.width-60,
+.width-65 {
+    width: 100%;
+}
+
+.block {
+    display: block;
+}
+
 .flex-container {
     display: flex;
+}
+
+.desktop {
+    display: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+h1,
+h2 {
+    color: #4a4a4a;
+    font-weight: bold;
+}
+
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 750px) {
+    .u_p-l-1_5rem {
+        padding-left: 1.5rem;
+    }
+
+    .u_p-t-2rem {
+        padding-top: 2rem;
+    }
+
+    .p-r-1_5rem {
+        padding-right: 1.5rem;
+    }
+
+    .desktop {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .width-30 {
+        width: 30%;
+    }
+
+    .width-35 {
+        width: 35%;
+    }
+
+    .width-40 {
+        width: 40%;
+    }
+
+    .width-60 {
+        width: 60%;
+    }
+
+    .width-65 {
+        width: 65%;
+    }
+
+    .p-r-24px {
+        padding-right: 1.5rem;
+    }
+
+
+    .p_2rem_1_5rem {
+        padding: 2rem 0 2rem 1.5rem;
+    }
+
 }
 
 header {
@@ -26,27 +129,26 @@ header * {
     align-items: center;
 }
 
-
-
 header .header-container {
     width: 100%;
 }
 
-
-
-.desktop {
-    display: none;
+header .icon {
+    width: 40px;
+    height: auto;
 }
 
-@media only screen and (min-width: 600px) {
-    .desktop {
-        display: block;
-    }
+#logo .brand-name {
+    line-height: 2rem;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+}
 
-    .mobile {
-        display: none;
-    }
+#logo .brand-name span {
+    font-weight: bold;
+}
 
+@media only screen and (min-width: 750px) {
     header .header-container {
         justify-content: space-between;
     }
@@ -56,23 +158,245 @@ header .header-container {
         padding-left: 1.5rem;
     }
 
+    header #logo,
+    header #links {
+        width: 50%;
+    }
+}
+
+
+@media only screen and (max-width: 849px) {
+
+    header #links .desktop {
+        display: none;
+    }
+
+    header #links .mobile {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 850px) {
+
+    header #logo {
+        width: 40%;
+    }
+
+    header #links {
+        width: 60%;
+    }
+
+
+
+
     header #links ul {
         justify-content: flex-end;
-        padding-right: 1rem;
     }
 
-    #logo .brand-name {
-        font-size: 2rem;
-        text-transform: uppercase;
-    }
+
 
     #links .nav-link {
+        height: 100%;
         padding: 0 0.5rem;
         font-size: 1.5rem;
-        box-shadow: inset ;
+        box-shadow: inset;
     }
 
-    svg{
+    #links a:visited {
+        color: initial;
+    }
+}
+
+
+/* Banner Section */
+#banner {
+    flex-direction: column;
+    align-items: center;
+    background-color: #dadada;
+}
+
+#banner img{
+    align-self: flex-start;
+}
+
+#banner p {
+    font-size: 1.25rem;
+    padding: 2rem 0 1.5rem;
+}
+
+.banner-content {
+    padding: 2rem 1rem;
+}
+
+#banner a.start-here {
+
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #4a4a4a;
+    padding: 0.5rem 0;
+}
+
+@media only screen and (min-width: 750px) {
+    #banner {
+        flex-direction: row;
+    }
+}
+
+
+/* Article - information - section */
+.article {
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.article:hover {
+    background-color: #d8d8d8;
+}
+
+.article img {
+    max-width: 100%;
+}
+
+.article .article-text {
+    padding: 1.5rem 0 0 1rem;
+}
+
+
+.article p {
+    padding: 1rem 0;
+}
+
+@media only screen and (max-width: 749px) {
+    .article img {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    .article {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .article .article-text {
+        padding-top: 0;
+    }
+
+    #articles {
+        align-items: flex-start;
+    }
+
+    #articles .desktop img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    #articles h1 {
+        padding: 2rem 0 1.5rem;
+    }
+}
+
+
+/* Start learnin section */
+#start-learning {
+    padding: 2rem 1rem;
+}
+
+#start-learning ul {
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+#start-learning .learning-content {
+    padding: 1.5rem 1rem;
+}
+
+#start-learning .card {
+    margin-bottom: 0.5rem;
+}
+
+@media only screen and (min-width: 750px) {
+    #start-learning {
+        padding: 2rem 3rem;
+        background-color: #dadada;
+    }
+
+    #start-learning ul {
+        flex-flow: row wrap;
+        align-items: stretch;
+        margin-bottom: -1rem;
+    }
+
+    #start-learning .card {
+        flex: 1 1 220px;
+        margin: 1rem 1rem;
+    }
+
+    #start-learning .card img {
+        width: 100%;
+    }
+
+    #start-learning .card .learning-content span {
+        padding: .5rem 0;
+    }
+
+    #start-learning .learning-content {
+        background-color: #fff;
+    }
+}
+
+@media only screen and (min-width: 850px) {
+    #start-learning .card {
+        flex-basis: 300px;
+    }
+}
+
+@media only screen and (min-width: 1420px) {
+    #start-learning .card {
+        flex-basis: 400px;
+    }
+}
+
+
+/* Thesis exhibit section */
+#thesis video {
+    max-width: 100%;
+    padding-bottom: 1.5rem;
+}
+
+#thesis h2 {
+    padding-bottom: 0.5rem;
+}
+#thesis h1 {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+@media only screen and (min-width: 750px) {
+    #thesis h1 {
+        padding-top: 0;
+        padding-bottom: 2rem;
+    }
+}
+
+
+
+/* Footer section */
+footer {
+    padding: 1rem 1.5rem;
+    border: none;
+}
+
+@media only screen and (min-width: 750px) {
+    footer {
+        justify-content: space-between;
+        border-top: 1px solid #d8d8d8;
+    }
+
+    footer nav ul li {
+        padding-left: 0.75rem;
     }
 
 }
