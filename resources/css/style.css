@@ -325,12 +325,12 @@ header .icon {
 
     #start-learning ul {
         flex-flow: row wrap;
-        align-items: stretch;
+       justify-content: center;
         margin-bottom: -1rem;
     }
 
     #start-learning .card {
-        flex: 1 1 220px;
+        flex: 0 0 280px;
         margin: 1rem 1rem;
     }
 
@@ -346,10 +346,14 @@ header .icon {
         background-color: #fff;
     }
 }
-
-@media only screen and (min-width: 850px) {
+@media only screen and (min-width: 800px) {
     #start-learning .card {
         flex-basis: 300px;
+    }
+}
+@media only screen and (min-width: 1300px) {
+    #start-learning .card {
+        flex-basis: 350px;
     }
 }
 
